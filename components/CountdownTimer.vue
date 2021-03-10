@@ -1,7 +1,7 @@
 <!-- prettier-ignore -->
 <template>
   <client-only>
-    <vac :end-time="new Date(Date.parse(new Date()) + 12 * 24 * 60 * 60 * 1000)">
+    <vac :end-time="new Date(Date.parse(new Date()) + 114 * 24 * 60 * 60 * 1000)">
       <span slot="process" slot-scope="{ timeObj }" class="text-5xl">
         <div class="flex justify-between w-full items-center mb-12">
           <div class="mt-2 p-5 w-40 rounded-lg shadow-xl">
