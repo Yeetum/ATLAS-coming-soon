@@ -1,6 +1,6 @@
 <!-- prettier-ignore -->
 <template>
-  <main class="h-screen w-full bg-special text-white z-50">
+  <main class="h-full md:h-screen w-full bg-special text-white z-50">
     <div class="max-w-screen-xl mx-auto">
       <div class="py-8 md:py-12 flex justify-center">
         <img src="~/assets/logo-2-white.png" class="z-50" />
