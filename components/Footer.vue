@@ -33,6 +33,6 @@
             </svg>
         </a>
     </div>
-    <span class=""> Copyright 2020 by RedQ, Inc. All rights reserved </span>
+    <span class=""> Yeetum Technologies, LLC. All rights reserved </span>
 </footer>
 </template>

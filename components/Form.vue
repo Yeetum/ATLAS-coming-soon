@@ -9,7 +9,7 @@
         <input 
             id="email"
             ref="input" 
-            v-model="email"
+            v-model="contacts.email"
             autocomplete="nope" 
             class="bg-transparent input border-b border-gray-400 appearance-none rounded w-full px-3 py-3 pt-5 pb-2 focus active:bg-transparent active:filled focus:border-indigo-600 focus:outline-none active:outline-none" 
             type="text" 
@@ -30,26 +30,32 @@
 
 <!-- eslint-disable -->
 <script>
+
 export default {
   data () {
     return {
-        email: "",
+        contacts: {
+            email: "",
+        }
     }
   },
   methods: {
       async submitForm(){
         //   console.log(this.email);
         //   console.log(this.$refs);
-        await this.$axios.$post ('/api/v1/send-email', {
-            email: this.email
-        }).then((result) => {
-            alert(result);
-            console.log('Thank you your Email Submit! We will Contact you when the app is the done!',result);
-        }).catch((err) => {
-            console.error(err);
-            alert('You Should Check Why this is an error', err);
-        });
-      }
+        await this.$axios.$put ('https://api.sendgrid.com/v3/marketing/contacts', {
+            contacts:  [{
+                    email: this.contacts.email
+            }]
+        }, {}
+        ).then( response => {
+            alert('Succesful, Thank you!', response.data);
+        }).catch( err => {
+            alert(err.message);
+            console.error('it\'s an error Please Check it why here: ', err.response);
+            console.error('it\'s an error Please Check it why here: ', err.response.data.message);
+        })
+    }
   },
   beforeUpdate() {
     let input = document.getElementById("email");

@@ -1,3 +1,7 @@
+// prettier-ignore
+//eslint-ignore
+require('dotenv').config()
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -22,8 +26,6 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  serverMiddleware: ['~/api/v1/send-email.js'],
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
@@ -38,8 +40,24 @@ export default {
     '@nuxtjs/axios',
   ],
 
+  env: {
+    sendGridAPIKEY: process.env.SENDGRID_API_KEY,
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true,
+    headers: {
+      common: {
+        "Content-Type": "application/json",
+        "Authorization": process.env.SENDGRID_API_KEY,
+      }
+    }
+  },
+  
+  proxy: {
+    '/sendgrid/': 'https://api.sendgrid.com/v3/marketing/contacts',
+},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
