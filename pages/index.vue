@@ -9,14 +9,8 @@
         <!-- Left -->
         <div class="flex flex-col justify-center md:justify-start relative items-center md:items-stretch order-2 md:order-1">
           <h3 class="coming-soon-radius">Our website in under construction</h3>
-<<<<<<< HEAD
           <h1 class="text-4xl mb-4 font-light text-center md:text-left">Our platform is launching soon</h1>
           <p class="text-base coming-soon-paragraph mb-12 text-center md:text-left">ATLAS is a market intelligence (MARKINT) SaaS platform tool used for determining, predicting, and analyzing financial markets.
-=======
-          <h1 class="text-4xl mb-4 font-light">Our platform is launching soon</h1>
-          <p class="text-base coming-soon-paragraph mb-12">ATLAS is a market intelligence (MARKINT) SaaS platform tool used for determining, predicting, and analyzing financial markets.
->>>>>>> a62eea6c140fea1d1b1ff531f04ae9ababa5c5a0
-          </p>
           <Form />
         </div>
         <!--  Right -->
