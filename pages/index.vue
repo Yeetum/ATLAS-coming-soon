@@ -10,7 +10,7 @@
         <div class="flex flex-col justify-start relative">
           <h3 class="coming-soon-radius">Our website in under construction</h3>
           <h1 class="text-4xl mb-4 font-light">Our platform is launching soon</h1>
-          <p class="text-base coming-soon-paragraph mb-12">ATLAS is a Market intelligence (MARKINT) SaaS platform tool used for determining, predicting, analyze financial markets.
+          <p class="text-base coming-soon-paragraph mb-12">ATLAS is a market intelligence (MARKINT) SaaS platform tool used for determining, predicting, and analyzing financial markets.
           </p>
           <Form />
         </div>
